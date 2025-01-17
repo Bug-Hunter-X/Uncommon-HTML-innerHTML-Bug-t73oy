@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Solution: Check if the element exists before appending.
+    const divElement = document.getElementById('myDiv');
+    if (divElement) {
+      divElement.innerHTML += "<p>This text should be appended.</p>";
+    } else {
+      console.error("Element with id 'myDiv' not found.");
+    }
+  </script>
+</body>
+</html>
